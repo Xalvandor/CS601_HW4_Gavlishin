@@ -36,15 +36,30 @@ document.addEventListener("DOMContentLoaded", () => {
         country.getInfo(countryList);
     });
     const snowyList = document.getElementById("snowyCountries");
+    let snowTotal = 0;
     snowyCountriesList.forEach(country => {
         country.getInfo(snowyList);
+        if (isSnowyCountry(country)) {
+            snowTotal += country.snowLevel;
+        }
     });
+    snowyList.innerHTML += `<li>Total snow level: ${snowTotal} inches.</li>`;
     const rainyList = document.getElementById("rainyCountries");
+    let rainTotal = 0;
     rainyCountriesList.forEach(country => {
         country.getInfo(rainyList);
+        if (isRainyCountry(country)) {
+            rainTotal = country.rainLevel;
+        }
     });
+    rainyList.innerHTML += `<li>Total rain level: ${rainTotal} inches.</li>`;
     const islandList = document.getElementById("islandCountries");
+    let totalLandSize = 0;
     islandCountriesList.forEach(country => {
         country.getInfo(islandList);
+        if (isIslandCountry(country)) {
+            totalLandSize += country.landSize;
+        }
     });
+    islandList.innerHTML += `<li>Total land size: ${totalLandSize}.</li>`;
 });

@@ -1,20 +1,6 @@
 // @ts-ignore
 import {ICountry} from "./interface.js";
 
-export class RainyCountry implements ICountry {
-    constructor(
-        public name: string,
-        public rainLevel: number,
-    ){}
-
-    getInfo(item:HTMLElement): HTMLElement {
-        if (item instanceof HTMLElement) {
-            item.innerHTML += `<li>${this.name} has a rain level of ${this.rainLevel}</li>`;
-        }
-        return item;
-    }
-}
-
 export class SnowyCountry implements ICountry {
     constructor(
         public name: string,
@@ -29,6 +15,20 @@ export class SnowyCountry implements ICountry {
     }
 }
 
+export class RainyCountry implements ICountry {
+    constructor(
+        public name: string,
+        public rainLevel: number,
+    ){}
+
+    getInfo(item:HTMLElement): HTMLElement {
+        if (item instanceof HTMLElement) {
+            item.innerHTML += `<li>${this.name} has a rain level of ${this.rainLevel}</li>`;
+        }
+        return item;
+    }
+}
+
 export class IslandCountry implements ICountry {
     constructor(
         public name: string,
@@ -37,7 +37,7 @@ export class IslandCountry implements ICountry {
 
     getInfo(item:HTMLElement): HTMLElement {
         if (item instanceof HTMLElement) {
-            item.innerHTML += `<li>${this.name} has a rain level of ${this.landSize}</li>`;
+            item.innerHTML += `<li>${this.name} has a land size of ${this.landSize}</li>`;
         }
         return item;
     }

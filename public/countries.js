@@ -1,15 +1,3 @@
-export class RainyCountry {
-    constructor(name, rainLevel) {
-        this.name = name;
-        this.rainLevel = rainLevel;
-    }
-    getInfo(item) {
-        if (item instanceof HTMLElement) {
-            item.innerHTML += `<li>${this.name} has a rain level of ${this.rainLevel}</li>`;
-        }
-        return item;
-    }
-}
 export class SnowyCountry {
     constructor(name, snowLevel) {
         this.name = name;
@@ -22,6 +10,18 @@ export class SnowyCountry {
         return item;
     }
 }
+export class RainyCountry {
+    constructor(name, rainLevel) {
+        this.name = name;
+        this.rainLevel = rainLevel;
+    }
+    getInfo(item) {
+        if (item instanceof HTMLElement) {
+            item.innerHTML += `<li>${this.name} has a rain level of ${this.rainLevel}</li>`;
+        }
+        return item;
+    }
+}
 export class IslandCountry {
     constructor(name, landSize) {
         this.name = name;
@@ -29,7 +29,7 @@ export class IslandCountry {
     }
     getInfo(item) {
         if (item instanceof HTMLElement) {
-            item.innerHTML += `<li>${this.name} has a rain level of ${this.landSize}</li>`;
+            item.innerHTML += `<li>${this.name} has a land size of ${this.landSize}</li>`;
         }
         return item;
     }
