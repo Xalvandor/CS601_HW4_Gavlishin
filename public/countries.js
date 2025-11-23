@@ -1,3 +1,4 @@
+// classes for different types of coutnries
 export class SnowyCountry {
     constructor(name, snowLevel) {
         this.name = name;
@@ -5,7 +6,7 @@ export class SnowyCountry {
     }
     getInfo(item) {
         if (item instanceof HTMLElement) {
-            item.innerHTML += `<li>${this.name} has a rain level of ${this.snowLevel}</li>`;
+            item.innerHTML += `<li>${this.name} has a rain level of ${this.snowLevel}.</li>`;
         }
         return item;
     }
@@ -17,7 +18,7 @@ export class RainyCountry {
     }
     getInfo(item) {
         if (item instanceof HTMLElement) {
-            item.innerHTML += `<li>${this.name} has a rain level of ${this.rainLevel}</li>`;
+            item.innerHTML += `<li>${this.name} has a rain level of ${this.rainLevel}.</li>`;
         }
         return item;
     }
@@ -29,11 +30,12 @@ export class IslandCountry {
     }
     getInfo(item) {
         if (item instanceof HTMLElement) {
-            item.innerHTML += `<li>${this.name} has a land size of ${this.landSize}</li>`;
+            item.innerHTML += `<li>${this.name} has a land size of ${this.landSize}.</li>`;
         }
         return item;
     }
 }
+// type assertions for classes
 export function isSnowyCountry(country) {
     return (country instanceof SnowyCountry && 'snowLevel' in country);
 }

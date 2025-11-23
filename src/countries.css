@@ -1,0 +1,33 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: floralwhite;
+}
+
+h1 {
+    border-bottom: 2px solid black;
+    border-radius: 2px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: azure;
+}
+
+section h2 {
+    border: 1px solid;
+    border-radius: 5px ;
+    background-color: lightblue;
+    width: max-content;
+    margin: auto;
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
